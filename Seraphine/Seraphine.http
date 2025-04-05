@@ -1,0 +1,6 @@
+@Seraphine_HostAddress = http://localhost:5043
+
+GET {{Seraphine_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
