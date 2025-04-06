@@ -12,7 +12,7 @@ public class LoginMiddleware(RequestDelegate _next)
 
     public async Task InvokeAsync(HttpContext context)
     {
-        //var rotasAnonimas = new[] { "/login", "/appVersion" }; // Rotas que não requerem autenticação
+        //var rotasAnonimas = new[] { "/login" }; // Rotas que não requerem autenticação
         //if (rotasAnonimas.Any(route => context.Request.Path.StartsWithSegments(route)))
         //{
         await _next(context);

@@ -20,6 +20,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDependencyInjectionServices(builder.Configuration);
 
+builder.Services.Configure<SpotifySettings>(
+    builder.Configuration.GetSection("Spotify")
+);
+
 var app = builder.Build();
 
 DatabaseInitializer.ApplyMigrations(app); // Aplicar as migrations antes de iniciar a API
